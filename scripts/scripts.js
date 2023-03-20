@@ -74,12 +74,12 @@ function populateList(shoppingListArray){
 for (let item of shoppingListArray) {
      //console.log(item)
     //make a new li
-    const newLi = document.createAttributeElement("Li");
+    const newLi = document.createElement("li");
     //update the li's text to item
     newLi.textContent = item;
     //append li to the ul
     // parent_node.appendchild(child_node)
-    ulList.appendchild(newLi);
+    ulList.appendChild(newLi);
 }
 
 }
@@ -87,3 +87,8 @@ for (let item of shoppingListArray) {
 let myShoppingList = ["cheese", "bread", "green pepper"];
 populateList(myShoppingList)
 
+function squareListMaker(){
+ulList.classList.add("squareList");
+ulList.classList.remove("circleList");
+}
+squareListMaker();
